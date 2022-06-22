@@ -6,10 +6,10 @@ namespace Abstract.Lesson
     {
         static void Main(string[] args)
         {
-            Triangolo triangolo = new Triangolo();
-            Rettangolo rettangolo = new Rettangolo();
+            //Triangolo triangolo = new Triangolo();
+             Rettangolo rettangolo = new Rettangolo();
 
-            FiguraGeometrica figuraGeometrica = new Triangolo();
+              FiguraGeometrica figuraGeometrica;
            // DimmiAreaFiguraGeometrica(figuraGeometrica);
 
              figuraGeometrica = rettangolo;
