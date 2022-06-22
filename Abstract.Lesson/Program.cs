@@ -37,5 +37,33 @@ namespace Abstract.Lesson.Abstract.Lesson
                 }
             }
         }
+    } 
+    public interface IOrganization
+    {
+
+    }
+    public interface IONU : IOrganization
+    {
+        public void  Oms(); 
+        public void  Unicef();
+        public void  Fmi();
+        public void  Fao();
+
+    }
+    public interface IEU : IOrganization
+    {
+        public void Bce();
+    }
+    public interface INATO : IOrganization
+    {
+        public int EncreaseMilitarExpense();
+    } 
+
+    public class Country : INATO
+    {
+        public int EncreaseMilitarExpense()
+        {
+            return 0; 
+        }
     }
 }
