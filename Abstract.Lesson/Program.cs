@@ -10,7 +10,7 @@ namespace Abstract.Lesson
              Rettangolo rettangolo = new Rettangolo();
 
               FiguraGeometrica figuraGeometrica;
-           // DimmiAreaFiguraGeometrica(figuraGeometrica);
+             // DimmiAreaFiguraGeometrica(figuraGeometrica);
 
              figuraGeometrica = rettangolo;
              DimmiAreaFiguraGeometrica(figuraGeometrica);
