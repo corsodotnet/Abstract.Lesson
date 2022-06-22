@@ -1,19 +1,19 @@
-﻿using System;
-
-namespace Abstract.Lesson
+﻿
+namespace Abstract.Lesson.Abstract.Lesson
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            //Triangolo triangolo = new Triangolo();
-             Rettangolo rettangolo = new Rettangolo();
-
-              FiguraGeometrica figuraGeometrica;
-             // DimmiAreaFiguraGeometrica(figuraGeometrica);
-
-             figuraGeometrica = rettangolo;
-             DimmiAreaFiguraGeometrica(figuraGeometrica);
+            // Triangolo triangolo = new Triangolo();
+            var rettangolo = new Rettangolo();
+            var cubo = new Cubo();
+            IFiguraGeometrica3D figuraGeometrica3D;
+            FiguraGeometrica figuraGeometrica;
+            // DimmiAreaFiguraGeometrica(figuraGeometrica);
+            figuraGeometrica3D = cubo;
+            figuraGeometrica = cubo;
+            DimmiAreaFiguraGeometrica(figuraGeometrica);
         }
 
         public static void DimmiAreaFiguraGeometrica(FiguraGeometrica figuraGeometrica)
