@@ -31,6 +31,7 @@ namespace Abstract.Lesson.Abstract.Lesson
             }
             set
             {
+
             }
         }
         public override int CalcArea()
