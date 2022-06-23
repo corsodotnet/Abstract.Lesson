@@ -6,8 +6,7 @@ namespace Abstract.Lesson.Abstract.Lesson
         private static void Main(string[] args)
         {
             // Triangolo triangolo = new Triangolo();
-            var rettangolo = new Rettangolo();
-            var cubo = new Cubo();
+            var rettangolo = new Rettangolo();            
             IFiguraGeometrica3D figuraGeometrica3D;
             FiguraGeometrica figuraGeometrica;
             // DimmiAreaFiguraGeometrica(figuraGeometrica);
