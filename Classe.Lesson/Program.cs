@@ -9,13 +9,16 @@ namespace Classe.Lesson
             Square quadra = new Square(20);
             Retangle Reta = new Retangle(40, 20);
             
-            Console.WriteLine("Lato Quad." + quadra.Lato); 
+            //Console.WriteLine("Lato Quad." + quadra.Lato); 
 
 
-            Console.WriteLine("Altezza Ret." + Reta.Altezza);
-            Console.WriteLine("Base Ret." + Reta.Base);
+            //Console.WriteLine("Altezza Ret." + Reta.Altezza);
+            //Console.WriteLine("Base Ret." + Reta.Base);
 
-
+           
+             Circle Circle = new Circle(23);
+             float risultato =   Circle.CalcolaArea();
+            Console.WriteLine(risultato);
         }
     }
 
@@ -54,18 +57,30 @@ namespace Classe.Lesson
 
     public abstract class FiguraGeometrica
     {
-        protected int _perimentro;
-
-        /// Constructor 
-        
+        protected int _perimentro;        
+        public abstract float CalcolaArea(); 
     }
     public class Circle : FiguraGeometrica
-    {   
+    {
         /// Definire il constructor
         /// dati Const 
         /// Dati variabili
+        /// 
+        int _raggio;
+        const float PI = 3.14F; 
+        public Circle(int Raggio)
+        {
+            _raggio = Raggio;
+        }
+        public override float CalcolaArea()
+        {
+            return (_raggio * _raggio ) * PI;
+        }
+        
+
+
     }
-   
+
     public class Retangle : FiguraGeometrica
     {  
         // Protected -> accesso da classi Child 
@@ -82,6 +97,10 @@ namespace Classe.Lesson
             _base = Base;
             _altezza = Altezza;
              
+        }
+        public override float CalcolaArea()
+        {
+            return 0;
         }
     }
     public class Square : Retangle
