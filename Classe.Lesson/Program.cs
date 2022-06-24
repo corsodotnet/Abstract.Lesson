@@ -54,21 +54,16 @@ namespace Classe.Lesson
 
     public abstract class FiguraGeometrica
     {
-        protected int _area;
+        protected int _perimentro;
 
         /// Constructor 
-        public FiguraGeometrica(int Area)
-        {
-            _area = Area;   
-        }
+        
     }
     public class Circle : FiguraGeometrica
     {   
-         
-        /// Membri 
-        /// const
-        /// funzione per calcolo dell'area
-        /// Constructor 
+        /// Definire il constructor
+        /// dati Const 
+        /// Dati variabili
     }
    
     public class Retangle : FiguraGeometrica
@@ -82,7 +77,7 @@ namespace Classe.Lesson
       
         public int Base { get { return _base; } }
         public int Altezza { get { return _altezza; } }
-        public Retangle(int Base, int Altezza)
+        public Retangle(int Base, int Altezza) 
         {
             _base = Base;
             _altezza = Altezza;
