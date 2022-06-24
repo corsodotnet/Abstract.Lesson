@@ -5,10 +5,16 @@ namespace Classe.Lesson
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {  
+            Square quadra = new Square(20);
+            Retangle Reta = new Retangle(40, 20);
+            
+            Console.WriteLine("Lato Quad." + quadra.Lato); 
 
-            Auto auto1 = new Auto("BMW");
-            Console.WriteLine(auto1.Name);
+
+            Console.WriteLine("Altezza Ret." + Reta.Altezza);
+            Console.WriteLine("Base Ret." + Reta.Base);
+
 
         }
     }
@@ -37,13 +43,59 @@ namespace Classe.Lesson
     }
 
 
-    public class Paese
+    public class Paese 
     {
         public string _name;
         public Paese(string Nome)
         {
             _name = Nome;
         }
+    }
 
+    public abstract class FiguraGeometrica
+    {
+        protected int _area;
+
+        /// Constructor 
+        public FiguraGeometrica(int Area)
+        {
+            _area = Area;   
+        }
+    }
+    public class Circle : FiguraGeometrica
+    {   
+         
+        /// Membri 
+        /// const
+        /// funzione per calcolo dell'area
+        /// Constructor 
+    }
+   
+    public class Retangle : FiguraGeometrica
+    {  
+        // Protected -> accesso da classi Child 
+        // Private -> solo dalla classe stessa
+        // Public -> dall'esterno 
+
+       protected int _base;
+       protected int _altezza;
+      
+        public int Base { get { return _base; } }
+        public int Altezza { get { return _altezza; } }
+        public Retangle(int Base, int Altezza)
+        {
+            _base = Base;
+            _altezza = Altezza;
+             
+        }
+    }
+    public class Square : Retangle
+    {
+        
+        public int Lato { get { return _altezza;  } }
+        public Square(int Lato) : base(Lato, Lato) // 20, 20
+        {
+           
+        }
     }
 }
