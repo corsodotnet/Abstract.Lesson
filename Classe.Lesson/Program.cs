@@ -6,36 +6,44 @@ namespace Classe.Lesson
     {
         static void Main(string[] args)
         {
-           
 
+            Auto auto1 = new Auto("BMW");
+            Console.WriteLine(auto1.Name);
 
-
-            //Auto auto1 = new Auto("FIAT PUNTO");
-            //Auto auto2 = new Auto("AUDI");
-            //Auto auto3 = new Auto("FERRARI");
-            //Auto auto4 = new Auto("FIAT RITMO");
-            //Auto auto5 = new Auto("BMW");   
-
-            //Console.WriteLine(auto1._name);
-            //Console.WriteLine(auto2._name);
-            //Console.WriteLine(auto3._name);
-            //Console.WriteLine(auto4._name);
-            //Console.WriteLine(auto5._name);
         }
     }
 
     public class Auto
     {
-        public string _name; 
+        // Membri
+         string _name;
+         string _targa;
+         int _nRuote;
+         int _cilindrata = 3000; 
+         
+
+        // Property
+        public string Name { get { return _name; } }
+
+
+        // constructor
         public Auto(string NomeAuto)
         {
-            _name = NomeAuto;   
+            _name = NomeAuto;
+            
         }
+
+        // Functions  
     }
 
 
     public class Paese
     {
+        public string _name;
+        public Paese(string Nome)
+        {
+            _name = Nome;
+        }
 
     }
 }
